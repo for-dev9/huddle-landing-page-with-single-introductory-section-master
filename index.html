@@ -80,24 +80,13 @@
         border: none;
         padding: 15px;
         font-size: 1rem;
+        transition: 0.3s ease-in;
       }
 
       .btn:hover {
         color: #fff;
         background-color: hsl(300, 69%, 71%);
-      }
-
-      .btnSocial {
-        height: 40px;
-        width: 40px;
-        border-radius: 50%;
-        border: 1px solid #fff;
-        background-color: transparent;
-      }
-
-      .btnSocial:hover {
-        border-color: hsl(300, 69%, 71%);
-        background-color: hsl(300, 69%, 71%);
+        transition: 0.3s ease-out;
       }
 
       .social {
@@ -107,7 +96,22 @@
         gap: 15px;
       }
 
-      .socialIcn {
+      .social button {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        background-color: transparent;
+        transition: 0.3s ease-in;
+      }
+
+      .social button:hover {
+        border-color: hsl(300, 69%, 71%);
+        background-color: hsl(300, 69%, 71%);
+        transition: 0.3s ease-out;
+      }
+
+      .social i {
         font-size: 20px;
         color: #fff;
       }
@@ -166,16 +170,16 @@
           <button id="btn" class="btn">Register</button>
 
           <div class="social">
-            <button id="btnFb" aria-label="fb" class="btnSocial">
-              <i class="bi bi-facebook socialIcn"></i>
+            <button id="btnFb" aria-label="fb">
+              <i class="bi bi-facebook"></i>
             </button>
 
-            <button id="btnTw" aria-label="tw" class="btnSocial">
-              <i class="bi bi-twitter socialIcn"></i>
+            <button id="btnTw" aria-label="tw">
+              <i class="bi bi-twitter"></i>
             </button>
 
-            <button id="btnIg" aria-label="ig" class="btnSocial">
-              <i class="bi bi-instagram socialIcn"></i>
+            <button id="btnIg" aria-label="ig">
+              <i class="bi bi-instagram"></i>
             </button>
           </div>
         </div>
