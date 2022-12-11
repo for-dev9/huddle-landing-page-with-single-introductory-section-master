@@ -4,32 +4,176 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
     <title>
       Frontend Mentor | Huddle landing page with single introductory section
     </title>
 
-    <link href="dist/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <style>
+      body,
+      html {
+        padding: 0;
+        margin: 0;
+        font-family: 'open sans';
+        background-color: hsl(257, 40%, 49%);
+        background-image: url('images/bg-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-attachment: fixed;
+      }
+
+      .logo {
+        padding-bottom: 50px;
+      }
+
+      .mainImg {
+        width: 100%;
+      }
+
+      .flex-container {
+        display: flex;
+        flex-flow: row;
+        padding: 0;
+        margin: 0;
+        gap: 50px;
+      }
+
+      .content {
+        width: 100%;
+        max-width: 550px;
+        font-family: 'Poppins';
+        color: white;
+        text-align: left;
+      }
+
+      .content .title {
+        font-size: 2.2rem;
+        font-weight: 600;
+        padding-bottom: 15px;
+      }
+
+      .content .detail {
+        font-size: 1rem;
+        padding-bottom: 20px;
+      }
+
+      .btn {
+        color: hsl(300, 69%, 71%);
+        background-color: #fff;
+        border-radius: 30px;
+        box-shadow: 2px 5px 11px rgba(0, 0, 0, 0.3);
+        width: 200px;
+        border: none;
+        padding: 15px;
+        font-size: 1rem;
+      }
+
+      .btn:hover {
+        color: #fff;
+        background-color: hsl(300, 69%, 71%);
+      }
+
+      .btnSocial {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        background-color: transparent;
+      }
+
+      .btnSocial:hover {
+        border-color: hsl(300, 69%, 71%);
+        background-color: hsl(300, 69%, 71%);
+      }
+
+      .social {
+        display: flex;
+        justify-content: flex-end;
+        padding: 120px 20px 0 20px;
+        gap: 15px;
+      }
+
+      .socialIcn {
+        font-size: 20px;
+        color: #fff;
+      }
+
+      @media (max-width: 620px) {
+        body,
+        html {
+          background-image: url('images/bg-mobile.svg');
+          background-size: contain;
+        }
+
+        .logo {
+          width: 160px;
+        }
+
+        .mainImg {
+          width: 100%;
+        }
+
+        .flex-container {
+          flex-flow: row wrap;
+        }
+
+        .content {
+          text-align: center;
+        }
+
+        .social {
+          justify-content: center;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h1 class="text-3xl underline">Hello world!</h1>
-    Build The Community Your Fans Will Love Huddle re-imagines the way we build
-    communities. You have a voice, but so does your audience. Create connections
-    with your users as you engage in genuine discussion. Register
+    <main style="padding: 30px">
+      <img src="images/logo.svg" alt="" class="logo" />
 
-    <footer>
-      <p class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </p>
-    </footer>
+      <div class="flex-container">
+        <div>
+          <img src="images/illustration-mockups.svg" alt="" class="mainImg" />
+        </div>
+
+        <div class="content">
+          <h1 class="title">Build The Community Your Fans Will Love</h1>
+
+          <div class="detail">
+            Huddle re-imagines the way we build communities. You have a voice,
+            but so does your audience. Create connections with your users as you
+            engage in genuine discussion. Register
+          </div>
+
+          <button id="btn" class="btn">Register</button>
+
+          <div class="social">
+            <button class="btnSocial">
+              <i class="bi bi-facebook socialIcn"></i>
+            </button>
+
+            <button class="btnSocial">
+              <i class="bi bi-twitter socialIcn"></i>
+            </button>
+
+            <button class="btnSocial">
+              <i class="bi bi-instagram socialIcn"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
